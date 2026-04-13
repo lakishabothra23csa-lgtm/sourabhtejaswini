@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sourabh & Tejaswini — A Sacred Union</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Cinzel:wght@400;500&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --rose: #d4a0a0;
+      --rose-light: #f0dada;
+      --rose-pale: #fdf4f4;
+      --rose-deep: #b07070;
+      --blush: #faf4f1;
+      --ivory: #fdfaf6;
+      --ivory-mid: #f5ede3;
+      --sand: #ece0d0;
+      --gold: #c8a96e;
+      --gold-soft: #dfc99a;
+      --gold-dim: #a8864a;
+      --text-dark: #3a2a20;
+      --text-mid: #7a5c4a;
+      --text-soft: #a08070;
+      --border: rgba(200, 169, 110, 0.22);
+      --border-rose: rgba(212, 160, 160, 0.28);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--text-dark);
+      font-family: 'Jost', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ENTRY */
+    .entry-overlay {
+      position: fixed;
+      inset: 0;
+      background: #fdfaf6;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.9s ease;
+    }
+
+    .entry-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .entry-inner {
+      width: min(88vw, 380px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(160, 100, 80, 0.16);
+      border: 1px solid var(--border-rose);
+      position: relative;
+    }
+
+    .entry-inner video {
+      width: 100%;
+      display: block;
+    }
+
+    .skip-btn {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--text-mid);
+      border: 1px solid var(--border-rose);
+      padding: 0.3rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4.5rem 1.5rem 7rem;
+      background: linear-gradient(155deg, #fdfaf6 0%, #faf1eb 45%, #fdf4f4 80%, #fdfaf6 100%);
+      overflow: hidden;
+    }
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .ring1 {
+      width: 540px;
+      height: 540px;
+      border: 1px solid rgba(212, 160, 160, 0.12);
+    }
+
+    .ring2 {
+      width: 760px;
+      height: 760px;
+      border: 1px solid rgba(200, 169, 110, 0.09);
+    }
+
+    .ring3 {
+      width: 980px;
+      height: 980px;
+      border: 1px solid rgba(212, 160, 160, 0.06);
+    }
+
+    .corner {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      pointer-events: none;
+    }
+
+    .corner.tl {
+      top: 0;
+      left: 0;
+    }
+
+    .corner.tr {
+      top: 0;
+      right: 0;
+      transform: scaleX(-1);
+    }
+
+    .corner.bl {
+      bottom: 0;
+      left: 0;
+      transform: scaleY(-1);
+    }
+
+    .corner.br {
+      bottom: 0;
+      right: 0;
+      transform: scale(-1);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 660px;
+    }
+
+    .ganesh {
+      width: 76px;
+      opacity: 0.85;
+      margin-bottom: 1.3rem;
+      filter: sepia(20%) brightness(1.05);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-6px)
+      }
+    }
+
+    .shloka {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.87rem;
+      color: var(--text-soft);
+      line-height: 2.1;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+    }
+
+    .rule {
+      width: 150px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rose), transparent);
+      margin: 0.8rem auto;
+    }
+
+    .rule.g {
+      background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+    }
+
+    .bless {
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--text-soft);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 2;
+      margin-bottom: 1.2rem;
+    }
+
+    .names-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem;
+      margin: 0.8rem 0 0.6rem;
+    }
+
+    .name-big {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3rem, 9vw, 4.8rem);
+      color: var(--rose-deep);
+      line-height: 1;
+    }
+
+    .amp {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-style: italic;
+      color: var(--gold);
+      align-self: center;
+    }
+
+    .family {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.83rem;
+      color: var(--text-soft);
+      line-height: 2.2;
+      margin-top: 1.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    .family strong {
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+
+    .family small {
+      font-size: 0.73rem;
+      opacity: 0.8;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      animation: bob 2.5s ease-in-out infinite;
+    }
+
+    .scroll-hint span {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      color: var(--rose-deep);
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .s-arrow {
+      width: 12px;
+      height: 12px;
+      border-right: 1px solid var(--rose-deep);
+      border-bottom: 1px solid var(--rose-deep);
+      transform: rotate(45deg);
+      opacity: 0.5;
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0)
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(7px)
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5.5rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .stag {
+      font-size: 0.63rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--rose-deep);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      opacity: 0.75;
+    }
+
+    .sh {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.85rem, 4.5vw, 2.6rem);
+      font-weight: 300;
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.01em;
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      margin: 0.9rem 0 2.5rem;
+    }
+
+    .ol {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-soft));
+    }
+
+    .ol.r {
+      background: linear-gradient(90deg, var(--gold-soft), transparent);
+    }
+
+    .od {
+      width: 5px;
+      height: 5px;
+      background: var(--rose);
+      border-radius: 50%;
+    }
+
+    /* SAVE DATE */
+    .sd-sec {
+      background: linear-gradient(150deg, #fdfaf8 0%, #faf2f2 55%, #fdf6ee 100%);
+    }
+
+    .scratch-hint {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .scratch-row {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .sc {
+      width: 108px;
+      background: white;
+      border: 1px solid var(--border-rose);
+      border-radius: 16px;
+      padding: 1.3rem 0.8rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(180, 100, 100, 0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .sc:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 26px rgba(180, 100, 100, 0.12);
+    }
+
+    .sc-l {
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .sc-v {
+      font-family: 'Cinzel', serif;
+      font-size: 1.75rem;
+      color: var(--text-dark);
+      font-weight: 400;
+    }
+
+    .sc-cover {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--rose-light), var(--sand));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.7s ease;
+    }
+
+    .sc-cover .h {
+      font-size: 2rem;
+      color: var(--rose-deep);
+      animation: hb 1.8s ease-in-out infinite;
+    }
+
+    @keyframes hb {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.18)
+      }
+    }
+
+    .sc-cover.off {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cdown {
+      display: flex;
+      gap: 1.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .cn {
+      font-family: 'Cinzel', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      min-width: 64px;
+      text-align: center;
+      background: white;
+      border: 1px solid var(--border-rose);
+      border-radius: 12px;
+      padding: 0.4rem 0.5rem;
+      box-shadow: 0 4px 14px rgba(180, 100, 100, 0.06);
+    }
+
+    .cl {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .jnote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--text-soft);
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* GALLERY */
+    .gal-sec {
+      background: white;
+    }
+
+    .gal-wrap {
+      max-width: 660px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-rose);
+      box-shadow: 0 14px 44px rgba(180, 100, 80, 0.09);
+    }
+
+    .gal-wrap video {
+      width: 100%;
+      display: block;
+    }
+
+    .gal-cap {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--text-soft);
+      font-size: 1rem;
+      margin-top: 1.6rem;
+    }
+
+    /* CEREMONIES */
+    .cer-sec {
+      background: linear-gradient(155deg, #fdfaf6 0%, #fdf4f4 100%);
+    }
+
+    .cer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cc {
+      background: white;
+      border: 1px solid var(--border-rose);
+      border-radius: 18px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      box-shadow: 0 5px 20px rgba(180, 100, 80, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cc:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 42px rgba(180, 100, 80, 0.12);
+    }
+
+    .cc-med {
+      position: relative;
+      min-height: 195px;
+      background: var(--rose-light);
+      overflow: hidden;
+    }
+
+    .cc-med video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+
+    .cc-dt {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--rose-deep);
+      font-family: 'Cinzel', serif;
+      font-size: 0.63rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      padding: 0.28rem 0.65rem;
+      border-radius: 50px;
+      border: 1px solid var(--border-rose);
+    }
+
+    .cc-inf {
+      padding: 1.7rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .cc-nm {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 0.65rem;
+      letter-spacing: 0.04em;
+    }
+
+    .cc-vn {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    .cc-mp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.73rem;
+      color: var(--rose-deep);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      border-bottom: 1px solid var(--border-rose);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+
+    .cc-mp:hover {
+      color: var(--rose);
+    }
+
+    /* RSVP */
+    .rsvp-sec {
+      background: var(--blush);
+    }
+
+    .rsvp-frm {
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .fb {
+      margin-bottom: 1.2rem;
+    }
+
+    .fb label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      font-weight: 500;
+      margin-bottom: 0.42rem;
+    }
+
+    .fb input,
+    .fb textarea {
+      width: 100%;
+      padding: 0.72rem 1rem;
+      border: 1px solid var(--border-rose);
+      border-radius: 10px;
+      background: white;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .fb input:focus,
+    .fb textarea:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 3px rgba(212, 160, 160, 0.14);
+    }
+
+    .fb textarea {
+      resize: vertical;
+      min-height: 86px;
+    }
+
+    .sbh {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose-deep);
+      font-weight: 500;
+      margin: 1.8rem 0 0.9rem;
+      opacity: 0.85;
+    }
+
+    .pr {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pl {
+      padding: 0.42rem 1rem;
+      border: 1px solid var(--border-rose);
+      border-radius: 50px;
+      background: white;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .pl:hover {
+      border-color: var(--rose);
+    }
+
+    .pl.on {
+      background: var(--rose-light);
+      color: var(--rose-deep);
+      border-color: var(--rose);
+      font-weight: 500;
+    }
+
+    .fn {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      font-style: italic;
+      margin-top: 0.32rem;
+    }
+
+    .sbtn {
+      width: 100%;
+      padding: 0.88rem;
+      background: linear-gradient(135deg, var(--rose), var(--rose-deep));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.86rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      margin-top: 1.8rem;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 6px 20px rgba(176, 112, 112, 0.28);
+    }
+
+    .sbtn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(155deg, #fdfaf6 0%, #faf2f2 100%);
+      border-top: 1px solid var(--border-rose);
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+
+    .f-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--rose-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      line-height: 1;
+      margin-bottom: 0.7rem;
+    }
+
+    .f-hrt {
+      font-size: 1rem;
+      color: var(--rose);
+      animation: hb 1.8s ease-in-out infinite;
+    }
+
+    .f-cred {
+      font-size: 0.62rem;
+      color: var(--text-soft);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 1.6rem;
+    }
+
+    .f-cred a {
+      color: var(--rose-deep);
+      text-decoration: none;
+    }
+
+    /* MODAL */
+    .mwrap {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(60, 35, 25, 0.38);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mwrap.on {
+      display: flex;
+    }
+
+    .mbox {
+      background: white;
+      border-radius: 22px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      max-width: 360px;
+      width: 88%;
+      border: 1px solid var(--border-rose);
+      box-shadow: 0 28px 72px rgba(160, 80, 80, 0.16);
+      animation: pin 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes pin {
+      from {
+        transform: scale(0.88);
+        opacity: 0
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1
+      }
+    }
+
+    .mt {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--rose-deep);
+      margin-bottom: 0.4rem;
+    }
+
+    .ms {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--text-soft);
+      margin-bottom: 1.4rem;
+    }
+
+    .mc {
+      padding: 0.5rem 2rem;
+      background: var(--rose-light);
+      color: var(--rose-deep);
+      border: 1px solid var(--border-rose);
+      border-radius: 50px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+    }
+
+    /* REVEAL */
+    .rise {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .rise.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media(max-width:580px) {
+      .cc {
+        grid-template-columns: 1fr
+      }
+
+      .cc-med {
+        min-height: 145px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Entry -->
+  <div class="entry-overlay" id="eo">
+    <div class="entry-inner">
+      <video autoplay muted playsinline id="ev"
+        src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/April/Tejaswini%20%26%20Sourabh/Entry%20Video%20Best%20Wedding%20Invite%20(24).mp4"></video>
+      <button class="skip-btn" onclick="skip()">Skip ›</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="ring ring1"></div>
+    <div class="ring ring2"></div>
+    <div class="ring ring3"></div>
+
+    <!-- Corner floral SVGs -->
+    <svg class="corner tl" viewBox="0 0 120 120" fill="none">
+      <path d="M5 5 Q50 2 45 45 Q2 50 5 5Z" fill="#d4a0a0" opacity="0.55" />
+      <path d="M45 45 Q70 20 75 50 Q55 72 45 45Z" fill="#d4a0a0" opacity="0.35" />
+      <path d="M45 45 Q20 70 50 75 Q72 55 45 45Z" fill="#c8a96e" opacity="0.25" />
+      <circle cx="45" cy="45" r="4" fill="#d4a0a0" opacity="0.5" />
+      <path d="M5 5 Q2 50 45 45 Q30 68 8 62 Q-2 38 5 5Z" fill="#c8a96e" opacity="0.18" />
+    </svg>
+    <svg class="corner tr" viewBox="0 0 120 120" fill="none">
+      <path d="M5 5 Q50 2 45 45 Q2 50 5 5Z" fill="#d4a0a0" opacity="0.55" />
+      <path d="M45 45 Q70 20 75 50 Q55 72 45 45Z" fill="#d4a0a0" opacity="0.35" />
+      <path d="M45 45 Q20 70 50 75 Q72 55 45 45Z" fill="#c8a96e" opacity="0.25" />
+      <circle cx="45" cy="45" r="4" fill="#d4a0a0" opacity="0.5" />
+    </svg>
+    <svg class="corner bl" viewBox="0 0 120 120" fill="none">
+      <path d="M5 5 Q50 2 45 45 Q2 50 5 5Z" fill="#d4a0a0" opacity="0.55" />
+      <path d="M45 45 Q70 20 75 50 Q55 72 45 45Z" fill="#d4a0a0" opacity="0.35" />
+      <path d="M45 45 Q20 70 50 75 Q72 55 45 45Z" fill="#c8a96e" opacity="0.25" />
+      <circle cx="45" cy="45" r="4" fill="#d4a0a0" opacity="0.5" />
+    </svg>
+    <svg class="corner br" viewBox="0 0 120 120" fill="none">
+      <path d="M5 5 Q50 2 45 45 Q2 50 5 5Z" fill="#d4a0a0" opacity="0.55" />
+      <path d="M45 45 Q70 20 75 50 Q55 72 45 45Z" fill="#d4a0a0" opacity="0.35" />
+      <path d="M45 45 Q20 70 50 75 Q72 55 45 45Z" fill="#c8a96e" opacity="0.25" />
+      <circle cx="45" cy="45" r="4" fill="#d4a0a0" opacity="0.5" />
+    </svg>
+
+    <div class="hero-content">
+      <img class="ganesh rise"
+        src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/Shriya%20%26%20Ashutosh/Vianyak%20png.png"
+        alt="Shri Ganesh">
+
+      <p class="shloka rise">
+        वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ<br>
+        निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा
+      </p>
+
+      <div class="rule rise"></div>
+
+      <p class="bless rise">
+        With the blessings of the Almighty &amp; our respected elders,<br>
+        we joyfully request your gracious presence on the wedding celebration of
+      </p>
+
+      <div class="names-row rise">
+        <div class="name-big">Sakashi</div>
+        <div class="amp">&amp;</div>
+        <div class="name-big">Tanmay</div>
+      </div>
+
+      <div class="rule g rise"></div>
+
+      <div class="family rise">
+        <strong>Sakashi</strong> — Son of Mr. Kamlesh M Mehta &amp; Mrs. Madhu Mehta<br>
+        <small>(Grandson of Late Shri Motilalji Mehta &amp; Late Smt. Jaywanti)</small>
+        <br><br>
+        <strong>Tanmay</strong> — Daughter of Mr. Kedar M Ghasari &amp; Mrs. Shaila<br>
+        <small>(Granddaughter of Late Shri Marutirao Ghasari &amp; Smt Chanda, Smt Ranjana)</small>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="s-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SAVE DATE -->
+  <section class="sd-sec">
+    <p class="stag rise">Save The Date</p>
+    <h2 class="sh rise">Reveal Our Big Day</h2>
+    <div class="orn rise">
+      <div class="ol"></div>
+      <div class="od"></div>
+      <div class="ol r"></div>
+    </div>
+    <p class="scratch-hint rise">Scratch the hearts to reveal</p>
+
+    <div class="scratch-row rise">
+      <div class="sc">
+        <div class="sc-l">Day</div>
+        <div class="sc-v">08</div>
+        <div class="sc-cover" id="s1" onclick="rev('s1')"><span class="h">♥</span></div>
+      </div>
+      <div class="sc">
+        <div class="sc-l">Month</div>
+        <div class="sc-v" style="font-size:1.3rem;padding-top:0.15rem;">May</div>
+        <div class="sc-cover" id="s2" onclick="rev('s2')"><span class="h">♥</span></div>
+      </div>
+      <div class="sc">
+        <div class="sc-l">Year</div>
+        <div class="sc-v" style="font-size:1.3rem;padding-top:0.15rem;">2026</div>
+        <div class="sc-cover" id="s3" onclick="rev('s3')"><span class="h">♥</span></div>
+      </div>
+    </div>
+
+    <div class="cdown rise">
+      <div class="cu">
+        <div class="cn" id="cD">00</div>
+        <div class="cl">Days</div>
+      </div>
+      <div class="cu">
+        <div class="cn" id="cH">00</div>
+        <div class="cl">Hrs</div>
+      </div>
+      <div class="cu">
+        <div class="cn" id="cM">00</div>
+        <div class="cl">Mins</div>
+      </div>
+      <div class="cu">
+        <div class="cn" id="cS">00</div>
+        <div class="cl">Secs</div>
+      </div>
+    </div>
+    <p class="jnote rise">The start of a beautiful journey…</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gal-sec">
+    <p class="stag rise">A Glimpse of Us</p>
+    <h2 class="sh rise">Our Beautiful Moments</h2>
+    <div class="orn rise">
+      <div class="ol"></div>
+      <div class="od"></div>
+      <div class="ol r"></div>
+    </div>
+    <div class="gal-wrap rise">
+      <video controls autoplay muted loop playsinline
+        src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/April/Tejaswini%20%26%20Sourabh/Tejaswini%20%26%20Sourabh%20%20Swiper%20video%20(1).mp4"></video>
+    </div>
+    <p class="gal-cap rise">A moment captured in time, forever in our hearts</p>
+  </section>
+
+  <!-- CEREMONIES -->
+  <section class="cer-sec">
+    <p class="stag rise">The Celebration Unfolds</p>
+    <h2 class="sh rise">Sacred Ceremonies</h2>
+    <div class="orn rise">
+      <div class="ol"></div>
+      <div class="od"></div>
+      <div class="ol r"></div>
+    </div>
+
+    <div class="cer-list">
+      <div class="cc rise">
+        <div class="cc-med">
+          <video autoplay muted loop playsinline
+            src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/April/Tejaswini%20%26%20Sourabh/215.mp4"></video>
+          <div class="cc-dt">07th May, 2026</div>
+        </div>
+        <div class="cc-inf">
+          <div class="cc-nm">Sangeet</div>
+          <p class="cc-vn">Woodrose Banquets and Hotel, Belagavi</p>
+          <a class="cc-mp" href="https://maps.google.com/?q=Woodrose+Banquets+and+Hotel,+Belagavi"
+            target="_blank">&#x1F4CD; View on Maps</a>
+        </div>
+      </div>
+      <div class="cc rise">
+        <div class="cc-med">
+          <video autoplay muted loop playsinline
+            src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/April/Tejaswini%20%26%20Sourabh/216.mp4"></video>
+          <div class="cc-dt">08th May, 2026</div>
+        </div>
+        <div class="cc-inf">
+          <div class="cc-nm">Marriage</div>
+          <p class="cc-vn">Woodrose Banquets and Hotel, Belagavi</p>
+          <a class="cc-mp" href="https://maps.google.com/?q=Woodrose+Banquets+and+Hotel,+Belagavi"
+            target="_blank">&#x1F4CD; View on Maps</a>
+        </div>
+      </div>
+      <div class="cc rise">
+        <div class="cc-med">
+          <video autoplay muted loop playsinline
+            src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/April/Tejaswini%20%26%20Sourabh/217.mp4"></video>
+          <div class="cc-dt">10th May, 2026</div>
+        </div>
+        <div class="cc-inf">
+          <div class="cc-nm">Reception</div>
+          <p class="cc-vn">Mayur Belgaum Presidency Hotel &amp; Spa, Belagavi</p>
+          <a class="cc-mp" href="https://maps.google.com/?q=Mayur+Belgaum+Presidency+Hotel+%26+Spa,+Belagavi"
+            target="_blank">&#x1F4CD; View on Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="rule" style="margin-bottom:1.8rem;"></div>
+    <div class="f-names">
+      <span>Sakashi</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;">&amp;</span>
+      <span>Tanmay</span>
+    </div>
+    <div class="f-hrt">♥</div>
+    <p class="f-cred">Made with ♥ by <a href="https://www.instagram.com/house_of_invitation_?igsh=azBiaXM4eWptZXp0"
+        target="_blank">House of Invitation</a></p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="mwrap" id="modal">
+    <div class="mbox">
+      <div class="mt">Thank You!</div>
+      <p class="ms">We can't wait to celebrate with you!</p>
+      <button class="mc" onclick="document.getElementById('modal').classList.remove('on')">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const ev2 = document.getElementById('ev'), eo2 = document.getElementById('eo');
+    function skip() { eo2.classList.add('hidden'); setTimeout(() => eo2.style.display = 'none', 900); }
+    ev2.addEventListener('ended', skip);
+    ev2.addEventListener('error', skip);
+    setTimeout(skip, 9000);
+
+    function rev(id) { document.getElementById(id).classList.add('off'); }
+
+    function tick() {
+      const diff = new Date('2026-05-08T00:00:00') - new Date();
+      if (diff <= 0) return;
+      const D = Math.floor(diff / 86400000), H = Math.floor((diff % 86400000) / 3600000),
+        M = Math.floor((diff % 3600000) / 60000), S = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cD').textContent = String(D).padStart(2, '0');
+      document.getElementById('cH').textContent = String(H).padStart(2, '0');
+      document.getElementById('cM').textContent = String(M).padStart(2, '0');
+      document.getElementById('cS').textContent = String(S).padStart(2, '0');
+    }
+    tick(); setInterval(tick, 1000);
+
+    function pick(gid, btn) {
+      document.getElementById(gid).querySelectorAll('.pl').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+    }
+    function sendL() { document.getElementById('modal').classList.add('on'); }
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rise').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>
